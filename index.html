@@ -1,60 +1,207 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
+    <title>Who Am I?</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <title>Gavin McDaniel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+          integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="page">
 
-<div id="contact-card">
-    <h1 id="contact-name">Gavin McDaniel</h1>
+<header class="site-header">
+    <div class="site-header__brand">
+        <a href="#" class="site-header__name" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Gavin McDaniel</a>
+    </div>
+    <div class="site-header__divider" aria-hidden="true"></div>
+    <nav class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list">
+            <li class="site-nav__item">
+                <a href="#about" class="site-nav__link">About</a>
+            </li>
+            <li class="site-nav__item">
+                <a href="#projects" class="site-nav__link">Projects</a>
+            </li>
+            <li class="site-nav__item">
+                <a href="#education" class="site-nav__link">Education</a>
+            </li>
+            <li class="site-nav__item">
+                <a href="#experience" class="site-nav__link">Experience</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="site-header__social" aria-label="Social links">
+        <a class="site-header__social-link" href="https://github.com/gavinmcd17" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a class="site-header__social-link" href="https://www.linkedin.com/in/gavin-mcdaniel-584568300/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a class="site-header__social-link" href="mailto:me@gavinmcdaniel.com" aria-label="Email">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+        </a>
+    </div>
+</header>
 
-    <ul id="nav-list">
-        <li class="nav-list-item">
-            <a class="nav-list-link" href="mailto:me@gavinmcdaniel.com">
-                <img class="social-icon" src="./assets/icon-email.svg" alt="" aria-hidden="true">
-                <span>Email</span>
-            </a>
-        </li>
+<main class="page__content">
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__media">
+            <img class="hero__image" src="./assets/me.png" alt="A headshot of me outside">
+        </div>
+        <div class="hero__content">
+            <h1 class="hero__title" id="hero-title">Hi, I'm <strong>Gavin!</strong></h1>
+            <div class="hero__title-line" aria-hidden="true"></div>
+            <div class="hero__summary">
+                <ul class="hero__list">
+                    <li class="hero__list-item">Computer Science Student @ App State</li>
+                    <li class="hero__list-item">Full-Stack Developer</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-        <li class="nav-list-item">
-            <a class="nav-list-link" href="https://www.linkedin.com/in/gavin-mcdaniel-584568300/">
-                <img class="social-icon" src="./assets/icon-linkedin.svg" alt="" aria-hidden="true">
-                <span>LinkedIn</span>
-            </a>
-        </li>
+    <section class="content-section content-section--accent" id="about">
+        <div class="content-section__inner">
+            <div class="content-section__header">
+                <h2 class="content-section__title">About Me</h2>
+                <a class="content-section__action" href="./assets/Gavin_McDaniel_resume.pdf" download>
+                    Download Resume
+                </a>
+            </div>
+            <div class="content-section__rule" aria-hidden="true"></div>
+            <div class="content-section__body content-section__body--about">
+                <p class="content-section__paragraph">
+                    I’m a computer science student at Appalachian State University, graduating in May 2026, with a
+                    focus on full-stack development and building intuitive user interfaces.
+                </p>
+                <p class="content-section__paragraph">
+                    I enjoy creating applications that solve real-world problems, especially where backend logic and
+                    user experience intersect. Currently, I'm developing a full-stack task management system that
+                    integrates with Google Calendar to automatically schedule tasks based on deadlines, duration, and
+                    availability, helping users make better use of their time.
+                </p>
+            </div>
+        </div>
+    </section>
 
-        <li class="nav-list-item">
-            <a class="nav-list-link" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">
-                <img class="social-icon" src="./assets/icon-resume.svg" alt="" aria-hidden="true">
-                <span>Resume</span>
-            </a>
-        </li>
+    <section class="content-section" id="projects">
+        <div class="content-section__inner">
+            <h2 class="content-section__title">Projects</h2>
+            <div class="content-section__rule" aria-hidden="true"></div>
 
-        <li class="nav-list-item">
-            <a class="nav-list-link" href="https://github.com/gavinmcd17">
-                <img class="social-icon" src="./assets/icon-github.svg" alt="" aria-hidden="true">
-                <span>GitHub</span>
-            </a>
-        </li>
+            <div class="projects-list">
+                <article class="project-card">
+                    <div class="project-card__image-wrap">
+                        <img class="project-card__image" src="./assets/task-view.png" alt="Screenshot of schedule.me on the task view">
+                    </div>
 
-        <li class="nav-list-item">
-            <a class="nav-list-link" href="https://unsplash.com/@gavinmcd17">
-                <img class="social-icon" src="./assets/icon-unsplash.svg" alt="" aria-hidden="true">
-                <span>Unsplash</span>
-            </a>
-        </li>
-    </ul>
-</div>
+                    <div class="project-card__content">
+                        <div class="project-card__header">
+                            <div class="project-card__heading-group">
+                                <h3 class="project-card__title">schedule.me</h3>
+                                <p class="project-card__subtitle">React, MongoDB, Spring Boot</p>
+                            </div>
+                        </div>
 
-<div id="image-info">
-    <a href="https://unsplash.com/photos/oR3BrTNYVKc">U.S. Route 321</a>
-</div>
+                        <div class="project-card__description">
+                            <p class="project-card__paragraph">
+                                schedule.me is a fully featured project-based task manager that dynamically adapts to
+                                your schedule. By linking your Google Calendar account and providing your working
+                                hours, schedule.me automatically finds the best time to complete your tasks.
+                            </p>
+                            <p class="project-card__paragraph">
+                                As a full stack web app, schedule.me uses React for the frontend, MongoDB for the
+                                database, and Spring Boot for the backend.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card__image-wrap">
+                        <img class="project-card__image" src="./assets/yess.png" alt="Screenshot of schedule.me on the task view">
+                    </div>
+
+                    <div class="project-card__content">
+                        <div class="project-card__header">
+                            <div class="project-card__heading-group">
+                                <h3 class="project-card__title">Y86 CPU Simulator</h3>
+                                <p class="project-card__subtitle">C++, GDB</p>
+                            </div>
+                        </div>
+
+                        <div class="project-card__description">
+                            <p class="project-card__paragraph">
+                                As part of my computer systems course, I developed a pipelined CPU simulator for the
+                                Y86 architecture in C++.
+                            </p>
+                            <p class="project-card__paragraph">
+                                It simulates the fetch, decode, execute, memory, and writeback pipeline stages, and I
+                                used GDB to identify pipeline hazards and logic errors during implementation.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section content-section--mid" id="education">
+        <div class="content-section__inner">
+            <h2 class="content-section__title">Education</h2>
+            <div class="content-section__rule" aria-hidden="true"></div>
+
+            <div class="education-card">
+                <div class="education-card__logo-wrap">
+                    <img class="education-card__logo" src="./assets/app-state-block-a-logo-transparent.svg" alt="Appalachian State University logo">
+                </div>
+
+                <div class="education-card__content">
+                    <h3 class="education-card__title">Appalachian State University</h3>
+                    <p class="education-card__line">B.S. Computer Science - <em>Expected May 2026</em></p>
+                    <p class="education-card__line">GPA: 3.45/ 4.0</p>
+                    <p class="education-card__courses">
+                        Relevant Courses: Data Structures, Programming Languages, Software
+                        Engineering, Server-side Web Programming, Client-side Web Programming,
+                        Computer Systems, Databases
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="experience">
+        <div class="content-section__inner">
+            <h2 class="content-section__title">Experience</h2>
+            <div class="content-section__rule" aria-hidden="true"></div>
+
+            <article class="experience-card">
+                <h3 class="experience-card__title">Appalachian State University Campus Store</h3>
+                <p class="experience-card__role">Tech Sales Associate</p>
+                <ul class="experience-card__list">
+                    <li class="experience-card__item">Advised students, faculty, and staff on educational technology purchases including laptops, accessories, and warranty options</li>
+                    <li class="experience-card__item">Troubleshot and maintained demo computers and devices used for in-store demos</li>
+                    <li class="experience-card__item">Provided customer support by answering technical questions and recommending appropriate hardware solutions</li>
+                    <li class="experience-card__item">Maintained and updated inventory and online order information through Oracle NetSuite</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <address class="site-footer__address">
+        Gavin L. McDaniel<br>
+        Salisbury, North Carolina<br>
+        <a class="site-footer__link" href="mailto:me@gavinmcdaniel.com">Email me:</a> me@gavinmcdaniel.com<br>
+    </address>
+</footer>
 
 </body>
 </html>
