@@ -476,29 +476,6 @@ ul {
     line-height: 1.8;
 }
 
-@media (min-width: 981px) {
-    :root {
-        --title-size: clamp(2.025rem, 2.7vw + 0.9rem, 3.6rem);
-        --site-name-size: clamp(1.665rem, 0.99vw + 1.08rem, 2.25rem);
-        --nav-link-size: clamp(0.9rem, 0.72vw + 0.585rem, 1.8rem);
-        --social-icon-size: 1.215rem;
-        --hero-title-size: clamp(2.7rem, 3.825vw + 0.9rem, 5.4rem);
-        --hero-list-size: clamp(1.0125rem, 1.08vw + 0.675rem, 1.8rem);
-        --button-text-size: 0.855rem;
-        --body-lg-size: clamp(0.99rem, 1.35vw + 0.63rem, 2.25rem);
-        --card-title-size: clamp(1.575rem, 1.125vw + 0.99rem, 2.25rem);
-        --card-subtitle-size: clamp(0.81rem, 0.405vw + 0.72rem, 1.125rem);
-        --body-md-size: clamp(0.9rem, 0.495vw + 0.765rem, 1.17rem);
-        --education-title-size: clamp(1.8rem, 1.35vw + 1.08rem, 2.7rem);
-        --education-line-size: clamp(0.9rem, 0.9vw + 0.675rem, 2.025rem);
-        --education-courses-size: clamp(0.855rem, 0.54vw + 0.72rem, 1.8rem);
-        --experience-title-size: clamp(1.62rem, 1.08vw + 1.035rem, 2.34rem);
-        --experience-role-size: clamp(0.9rem, 0.72vw + 0.72rem, 1.35rem);
-        --experience-list-size: clamp(0.9rem, 0.45vw + 0.765rem, 1.125rem);
-        --footer-text-size: 0.9rem;
-    }
-}
-
 .site-footer__link {
     text-decoration: underline;
     text-underline-offset: 0.15em;
