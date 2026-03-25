@@ -1,6 +1,6 @@
 :root {
-    --color-page: #15181e;
-    --color-nav: #1d2530;
+    --color-page: #1e2127;
+    --color-nav: #0f1419;
     --color-panel: #243244;
     --color-section: #34526d;
     --color-accent: #4f7da7;
@@ -20,7 +20,23 @@
     --section-padding-x: clamp(1.125rem, 5.75vw, 5.25rem);
     --section-gap: clamp(3rem, 7vw, 5.625rem);
     --title-size: clamp(2.25rem, 3vw + 1rem, 4rem);
-    --body-size: clamp(1rem, 0.9vw + 0.75rem, 1.7rem);
+    --site-name-size: clamp(1.85rem, 1.1vw + 1.2rem, 2.5rem);
+    --nav-link-size: clamp(1rem, 0.8vw + 0.65rem, 2rem);
+    --social-icon-size: 1.35rem;
+    --hero-title-size: clamp(3rem, 4.25vw + 1rem, 6rem);
+    --hero-list-size: clamp(1.125rem, 1.2vw + 0.75rem, 2rem);
+    --button-text-size: 0.95rem;
+    --body-lg-size: clamp(1.1rem, 1.5vw + 0.7rem, 2.5rem);
+    --card-title-size: clamp(1.75rem, 1.25vw + 1.1rem, 2.5rem);
+    --card-subtitle-size: clamp(0.9rem, 0.45vw + 0.8rem, 1.25rem);
+    --body-md-size: clamp(1rem, 0.55vw + 0.85rem, 1.3rem);
+    --education-title-size: clamp(2rem, 1.5vw + 1.2rem, 3rem);
+    --education-line-size: clamp(1rem, 1vw + 0.75rem, 2.25rem);
+    --education-courses-size: clamp(0.95rem, 0.6vw + 0.8rem, 2rem);
+    --experience-title-size: clamp(1.8rem, 1.2vw + 1.15rem, 2.6rem);
+    --experience-role-size: clamp(1rem, 0.8vw + 0.8rem, 1.5rem);
+    --experience-list-size: clamp(1rem, 0.5vw + 0.85rem, 1.25rem);
+    --footer-text-size: 1rem;
     --header-height: 6.4375rem;
     --anchor-offset: 0px;
 }
@@ -88,7 +104,7 @@ ul {
 }
 
 .site-header__name {
-    font-size: clamp(1.85rem, 1.1vw + 1.2rem, 2.5rem);
+    font-size: var(--site-name-size);
     font-weight: 400;
     line-height: 1.2;
     white-space: nowrap;
@@ -114,7 +130,7 @@ ul {
 }
 
 .site-nav__link {
-    font-size: clamp(1rem, 0.8vw + 0.65rem, 2rem);
+    font-size: var(--nav-link-size);
     font-weight: 400;
     line-height: 1.25;
     transition: opacity 0.2s ease;
@@ -138,7 +154,7 @@ ul {
     justify-content: center;
     width: 2.25rem;
     height: 2.25rem;
-    font-size: 1.35rem;
+    font-size: var(--social-icon-size);
     transition: opacity 0.2s ease;
 }
 
@@ -182,7 +198,7 @@ ul {
 }
 
 .hero__title {
-    font-size: clamp(3rem, 4.25vw + 1rem, 6rem);
+    font-size: var(--hero-title-size);
     font-weight: 300;
     line-height: 1.03;
     letter-spacing: -0.04em;
@@ -225,7 +241,7 @@ ul {
 
 .hero__list-item {
     color: var(--color-text-muted);
-    font-size: clamp(1.125rem, 1.2vw + 0.75rem, 2rem);
+    font-size: var(--hero-list-size);
     font-weight: 300;
     line-height: 1.3;
 }
@@ -273,7 +289,7 @@ ul {
     border: 1px solid var(--color-button-border);
     border-radius: 999px;
     color: var(--color-text);
-    font-size: 0.95rem;
+    font-size: var(--button-text-size);
     font-weight: 700;
     letter-spacing: 0.02em;
     transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
@@ -297,7 +313,7 @@ ul {
 }
 
 .content-section__paragraph {
-    font-size: clamp(1.1rem, 1.5vw + 0.7rem, 2.5rem);
+    font-size: var(--body-lg-size);
     font-weight: 300;
     line-height: 1.38;
 }
@@ -347,7 +363,7 @@ ul {
 }
 
 .project-card__title {
-    font-size: clamp(1.75rem, 1.25vw + 1.1rem, 2.5rem);
+    font-size: var(--card-title-size);
     font-weight: 700;
     line-height: 1.2;
 }
@@ -355,7 +371,7 @@ ul {
 .project-card__subtitle {
     margin-top: 0.35rem;
     color: var(--color-text-muted);
-    font-size: clamp(0.9rem, 0.45vw + 0.8rem, 1.25rem);
+    font-size: var(--card-subtitle-size);
     font-weight: 300;
     line-height: 1.4;
 }
@@ -365,7 +381,7 @@ ul {
 }
 
 .project-card__paragraph {
-    font-size: clamp(1rem, 0.55vw + 0.85rem, 1.3rem);
+    font-size: var(--body-md-size);
     font-weight: 300;
     line-height: 1.6;
 }
@@ -391,14 +407,14 @@ ul {
 }
 
 .education-card__title {
-    font-size: clamp(2rem, 1.5vw + 1.2rem, 3rem);
+    font-size: var(--education-title-size);
     font-weight: 300;
     line-height: 1.2;
 }
 
 .education-card__line {
     color: var(--color-text-muted);
-    font-size: clamp(1rem, 1vw + 0.75rem, 2.25rem);
+    font-size: var(--education-line-size);
     font-weight: 300;
     line-height: 1.4;
 }
@@ -410,7 +426,7 @@ ul {
 .education-card__courses {
     max-width: 59.1875rem;
     margin-top: 1rem;
-    font-size: clamp(0.95rem, 0.6vw + 0.8rem, 2rem);
+    font-size: var(--education-courses-size);
     font-weight: 300;
     line-height: 1.35;
 }
@@ -421,7 +437,7 @@ ul {
 }
 
 .experience-card__title {
-    font-size: clamp(1.8rem, 1.2vw + 1.15rem, 2.6rem);
+    font-size: var(--experience-title-size);
     font-weight: 700;
     line-height: 1.25;
 }
@@ -429,7 +445,7 @@ ul {
 .experience-card__role {
     margin-top: 0.5rem;
     color: var(--color-text-muted);
-    font-size: clamp(1rem, 0.8vw + 0.8rem, 1.5rem);
+    font-size: var(--experience-role-size);
     font-weight: 300;
     line-height: 1.4;
 }
@@ -439,7 +455,7 @@ ul {
     gap: 0.875rem;
     margin-top: 1.5rem;
     padding-left: 1.25rem;
-    font-size: clamp(1rem, 0.5vw + 0.85rem, 1.25rem);
+    font-size: var(--experience-list-size);
     line-height: 1.55;
 }
 
@@ -455,9 +471,32 @@ ul {
 
 .site-footer__address {
     color: var(--color-text);
-    font-size: 1rem;
+    font-size: var(--footer-text-size);
     font-style: normal;
     line-height: 1.8;
+}
+
+@media (min-width: 981px) {
+    :root {
+        --title-size: clamp(2.025rem, 2.7vw + 0.9rem, 3.6rem);
+        --site-name-size: clamp(1.665rem, 0.99vw + 1.08rem, 2.25rem);
+        --nav-link-size: clamp(0.9rem, 0.72vw + 0.585rem, 1.8rem);
+        --social-icon-size: 1.215rem;
+        --hero-title-size: clamp(2.7rem, 3.825vw + 0.9rem, 5.4rem);
+        --hero-list-size: clamp(1.0125rem, 1.08vw + 0.675rem, 1.8rem);
+        --button-text-size: 0.855rem;
+        --body-lg-size: clamp(0.99rem, 1.35vw + 0.63rem, 2.25rem);
+        --card-title-size: clamp(1.575rem, 1.125vw + 0.99rem, 2.25rem);
+        --card-subtitle-size: clamp(0.81rem, 0.405vw + 0.72rem, 1.125rem);
+        --body-md-size: clamp(0.9rem, 0.495vw + 0.765rem, 1.17rem);
+        --education-title-size: clamp(1.8rem, 1.35vw + 1.08rem, 2.7rem);
+        --education-line-size: clamp(0.9rem, 0.9vw + 0.675rem, 2.025rem);
+        --education-courses-size: clamp(0.855rem, 0.54vw + 0.72rem, 1.8rem);
+        --experience-title-size: clamp(1.62rem, 1.08vw + 1.035rem, 2.34rem);
+        --experience-role-size: clamp(0.9rem, 0.72vw + 0.72rem, 1.35rem);
+        --experience-list-size: clamp(0.9rem, 0.45vw + 0.765rem, 1.125rem);
+        --footer-text-size: 0.9rem;
+    }
 }
 
 .site-footer__link {
