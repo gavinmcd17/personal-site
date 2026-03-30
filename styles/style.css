@@ -25,7 +25,7 @@
     --hero-title-size: clamp(3rem, 4.25vw + 1rem, 6rem);
     --hero-list-size: clamp(1.125rem, 1.2vw + 0.75rem, 2rem);
     --button-text-size: 0.95rem;
-    --body-lg-size: clamp(1.1rem, 1.5vw + 0.7rem, 2.5rem);
+    --body-lg-size: clamp(1.1rem, 1.5vw + 0.7rem, 2rem);
     --card-title-size: clamp(1.75rem, 1.25vw + 1.1rem, 2.5rem);
     --card-subtitle-size: clamp(0.9rem, 0.45vw + 0.8rem, 1.25rem);
     --body-md-size: clamp(1rem, 0.55vw + 0.85rem, 1.3rem);
@@ -37,10 +37,10 @@
     --experience-list-size: clamp(1rem, 0.5vw + 0.85rem, 1.25rem);
     --footer-text-size: 1rem;
     --header-height: 6.4375rem;
-    --anchor-offset: 0px;
 
     /* Misc. */
     --section-radius: 8px;
+    --anchor-offset: 0px;
     --section-shadow: 0 10px 24px rgba(6, 12, 22, 0.16);
     --font-family-base: "Inter", sans-serif;
     --page-max-width: 1440px;
