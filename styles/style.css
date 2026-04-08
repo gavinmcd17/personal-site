@@ -17,14 +17,16 @@
 
     /* Sizing */
     --section-padding-x: clamp(1.125rem, 5.75vw, 5.25rem);
-    --section-gap: clamp(3rem, 7vw, 5.625rem);
+    --layout-inline-padding: max(
+        var(--section-padding-x),
+        calc((100% - var(--page-max-width)) / 2 + var(--section-padding-x))
+    );
+    --content-block-spacing: 2.5rem;
     --title-size: clamp(2.25rem, 3vw + 1rem, 4rem);
     --site-name-size: clamp(1.85rem, 1.1vw + 1.2rem, 2.5rem);
     --nav-link-size: clamp(1rem, 0.8vw + 0.65rem, 2rem);
-    --social-icon-size: 1.35rem;
     --hero-title-size: clamp(3rem, 4.25vw + 1rem, 6rem);
     --hero-list-size: clamp(1.125rem, 1.2vw + 0.75rem, 2rem);
-    --button-text-size: 0.95rem;
     --body-lg-size: clamp(1.1rem, 1.5vw + 0.7rem, 2rem);
     --card-title-size: clamp(1.75rem, 1.25vw + 1.1rem, 2.5rem);
     --card-subtitle-size: clamp(0.9rem, 0.45vw + 0.8rem, 1.25rem);
@@ -35,13 +37,13 @@
     --experience-title-size: clamp(1.8rem, 1.2vw + 1.15rem, 2.6rem);
     --experience-role-size: clamp(1rem, 0.8vw + 0.8rem, 1.5rem);
     --experience-list-size: clamp(1rem, 0.5vw + 0.85rem, 1.25rem);
-    --footer-text-size: 1rem;
-    --header-height: 6.4375rem;
 
     /* Misc. */
     --section-radius: 8px;
     --anchor-offset: 0px;
     --section-shadow: 0 10px 24px rgba(6, 12, 22, 0.16);
+    --transition-fast: 0.2s ease;
+    --interactive-opacity: 0.75;
     --font-family-base: "Inter", sans-serif;
     --page-max-width: 1440px;
 }
@@ -95,12 +97,9 @@ ul {
     align-items: center;
     gap: 1.5rem;
     width: 100%;
-    min-height: var(--header-height);
+    min-height: 6.4375rem;
     padding-block: 1.25rem;
-    padding-inline: max(
-        var(--section-padding-x),
-        calc((100% - var(--page-max-width)) / 2 + var(--section-padding-x))
-    );
+    padding-inline: var(--layout-inline-padding);
     background: var(--color-nav);
 }
 
@@ -138,12 +137,12 @@ ul {
     font-size: var(--nav-link-size);
     font-weight: 400;
     line-height: 1.25;
-    transition: opacity 0.2s ease;
+    transition: opacity var(--transition-fast);
 }
 
 .site-nav__link:hover,
 .site-nav__link:focus-visible {
-    opacity: 0.75;
+    opacity: var(--interactive-opacity);
 }
 
 .site-header__social {
@@ -159,13 +158,13 @@ ul {
     justify-content: center;
     width: 2.25rem;
     height: 2.25rem;
-    font-size: var(--social-icon-size);
-    transition: opacity 0.2s ease;
+    font-size: 1.35rem;
+    transition: opacity var(--transition-fast);
 }
 
 .site-header__social-link:hover,
 .site-header__social-link:focus-visible {
-    opacity: 0.75;
+    opacity: var(--interactive-opacity);
 }
 
 .page__content {
@@ -294,10 +293,13 @@ ul {
     border: 1px solid var(--color-button-border);
     border-radius: 999px;
     color: var(--color-text);
-    font-size: var(--button-text-size);
+    font-size: 0.95rem;
     font-weight: 700;
     letter-spacing: 0.02em;
-    transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+    transition:
+        background-color var(--transition-fast),
+        color var(--transition-fast),
+        opacity var(--transition-fast);
 }
 
 .content-section__action:hover,
@@ -329,8 +331,8 @@ ul {
 
 .projects-list {
     display: grid;
-    gap: 2.5rem;
-    padding-top: 2.5rem;
+    gap: var(--content-block-spacing);
+    padding-top: var(--content-block-spacing);
 }
 
 .project-card {
@@ -400,7 +402,7 @@ ul {
     grid-template-columns: minmax(8rem, 18.875rem) minmax(18rem, 1fr);
     gap: 1.6875rem;
     align-items: start;
-    padding-top: 2.5rem;
+    padding-top: var(--content-block-spacing);
 }
 
 .education-card__logo-wrap {
@@ -438,7 +440,7 @@ ul {
 
 .experience-card {
     max-width: 62rem;
-    padding-top: 2.5rem;
+    padding-top: var(--content-block-spacing);
 }
 
 .experience-card__title {
@@ -475,16 +477,13 @@ ul {
 .site-footer {
     width: 100%;
     padding-block: 2.5rem 3.5rem;
-    padding-inline: max(
-        var(--section-padding-x),
-        calc((100% - var(--page-max-width)) / 2 + var(--section-padding-x))
-    );
+    padding-inline: var(--layout-inline-padding);
     background: var(--color-footer);
 }
 
 .site-footer__address {
     color: var(--color-text);
-    font-size: var(--footer-text-size);
+    font-size: 1rem;
     font-style: normal;
     line-height: 1.8;
 }
