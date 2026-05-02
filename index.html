@@ -16,7 +16,7 @@
 
 <header class="site-header">
     <div class="site-header__brand">
-        <a href="#" class="site-header__name" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Gavin McDaniel</a>
+        <a href="#" class="site-header__name" id="site-brand-link">Gavin McDaniel</a>
     </div>
     <div class="site-header__divider" aria-hidden="true"></div>
     <nav class="site-nav" aria-label="Primary">
@@ -76,12 +76,11 @@
             <div class="content-section__rule" aria-hidden="true"></div>
             <div class="content-section__body content-section__body--about">
                 <p class="content-section__paragraph">
-                    I’m a computer science student at Appalachian State University, graduating in May 2026, with a
+                    My name is Gavin McDaniel, and I'm a computer science student at Appalachian State University, set to graduate in May 2026, with a
                     focus on full-stack development and building intuitive user interfaces.
                 </p>
                 <p class="content-section__paragraph">
-                    I enjoy creating applications that solve real-world problems, especially where backend logic and
-                    user experience intersect. Currently, I'm developing a full-stack task management system that
+                    I enjoy creating applications that solve real-world problems. Currently, I'm developing a full-stack task management system that
                     integrates with Google Calendar to automatically schedule tasks based on deadlines, duration, and
                     availability, helping users make better use of their time.
                 </p>
@@ -115,9 +114,19 @@
                                 hours, schedule.me automatically finds the best time to complete your tasks.
                             </p>
                             <p class="project-card__paragraph">
-                                As a full stack web app, schedule.me uses React for the frontend, MongoDB for the
-                                database, and Spring Boot for the backend.
+                                A full stack app, schedule.me uses React for the frontend, Java + Spring Boot for the
+                                backend, MongoDB (Atlas) as the database, and is hosted using AWS.
                             </p>
+                            <div class="project-card__links">
+                                <a href="https://github.com/gavinmcd17/Task_Scheduler" class="project-card__link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                    GitHub
+                                </a>
+                                <a href="https://scheduler.gavinmcdaniel.com" class="project-card__link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                    Live App
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -144,6 +153,12 @@
                                 It simulates the fetch, decode, execute, memory, and writeback pipeline stages, and I
                                 used GDB to identify pipeline hazards and logic errors during implementation.
                             </p>
+                            <div class="project-card__links">
+                                <a href="https://github.com/gavinmcd17/toy-cpu-simulator" class="project-card__link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                    GitHub
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -201,8 +216,19 @@
         Gavin L. McDaniel<br>
         Salisbury, North Carolina<br>
         <a class="site-footer__link" href="mailto:me@gavinmcdaniel.com">Email me:</a> me@gavinmcdaniel.com<br>
-    </address>
+     </address>
 </footer>
+
+<script>
+    // Smooth scroll to top when clicking the site brand
+    const siteBrandLink = document.getElementById('site-brand-link');
+    if (siteBrandLink) {
+        siteBrandLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+</script>
 
 </body>
 </html>
